@@ -1,0 +1,75 @@
+---
+title: " Black Prison Popluation In the U.S. (1990-2016):"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(areaplot)
+library(stringr)
+library(dplyr)
+library(ggplot2)
+library("plotly")
+library("dplyr")
+library("tidyr")
+library("stringr")
+library(maps)
+library(tidyverse)
+library(mapproj)
+library(knitr)
+source("../source/analysis.R")
+```
+
+
+## Introduction and Summary:
+This report I have created uses the incarceration data to get specific 
+information about the prison system in the United States. As we all know, even 
+though Racism impacts all people of color in this country, Black Americans are
+the ones that experience the most racism. For that reason, I decided to use this
+data to help me understand the population of Black people in prison from different
+years and times. I created a table "inc_data" and chose the columns I wanted
+to help me learn about Black Americans in the system. From there I created other
+tables to help me answer questions. After using the "inc_data" I have learned 
+that the highest average for the Black Prison population for all years starting from
+1990 and ending in 2016 was **`r highest_mean`** and the lowest average for all the years
+was **`r lowest_mean`**. I have also learned that in 2016, the average Black Prisoners
+was **`r mean_pop_2016`**. I chose to look at 2016 because it's the last year on my table.
+I have also learned about the difference between the starting year 1990 and 
+the ending year 2016 averages which was **`r change`**. The year 1990 has an average of
+**`r mean_1990`** Black Prisoners.
+
+
+## Time Trend Chart:
+
+This chart is good for looking at the year that had the most Black people in the 
+system as a whole, we can see by following the points on the chart that it's 2013
+as it had over 25 Million Black people in the system (Prison, jail, etc). We can also 
+see the change in the Black population over the years.
+```{r trend, echo=FALSE, warning=FALSE, message=FALSE}
+source("../source/analysis.R")
+z
+```
+
+## Comparison Chart:
+This chart shows us the difference in the regions in the country. By looking at it
+we can see that the "Northeast" had the highest population of Black prisoners.
+This chart helps us see the regions that had the highest Black Prisoner pop. and
+the regions that had lower.
+
+```{r comparison, echo=FALSE, warning=FALSE, message=FALSE}
+source("../source/analysis.R")
+x
+```
+
+
+## Map of California:
+This map shows the prison population of Black Americans from different counties 
+in California from the year 2015, the green color represents the N/A values. By 
+looking at the map and the "Population" color section we can see which county 
+had the highest prisoners.
+
+```{r map, echo=FALSE, warning=FALSE, message=FALSE}
+source("../source/analysis.R")
+final_ca
+```
+
